@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="firstDiv">
+	<!-- Centered main text of page -->
+		Matthew.
+		<div id="title_text"></div>
+</div>
+
+</body>
+
+<script>
+	var i = 0;
+	var curr_word = '';
+	var forward = true;
+	var forward_speed = 500;
+	var back_speed = 100;
+	var iter = 0;
+	function typeWriterWrapper(txt, speed) {
+
+		function typeWriter() {
+			if (iter == 0){
+			  var txt_1 = txt[0];
+			  if (i < txt_1.length && forward) {
+			    curr_word += txt_1.charAt(i);
+			    document.getElementById("title_text").innerHTML = curr_word + '|';
+			    i++;
+			    setTimeout(typeWriter, forward_speed*Math.random() + speed);
+			  }
+			  if (i == txt_1.length){
+			  	document.getElementById("title_text").innerHTML = curr_word;
+			  	forward = false;
+			  }
+			  if (i > 0 && !forward) {
+			    curr_word = curr_word.slice(0, -1);
+			    document.getElementById("title_text").innerHTML = curr_word + '|';
+			    i--;
+			    setTimeout(typeWriter, back_speed*Math.random() + speed);
+			  }
+			  if (i == 0 && !forward) {
+			  	iter = 1;
+			  	forward = true;
+			  }
+			}
+			if (iter == 1){
+			  var txt_2 = txt[1];
+			  if (i < txt_2.length && forward) {
+			    curr_word += txt_2.charAt(i);
+			    document.getElementById("title_text").innerHTML = curr_word + '|';
+			    i++;
+			    setTimeout(typeWriter, forward_speed*Math.random() + speed);
+			  }
+			  if (i == txt_2.length){
+			  	document.getElementById("title_text").innerHTML = curr_word;
+			  	forward = false;
+			  	setTimeout(typeWriter, 15000);
+			  }
+			  if (i > 0 && !forward) {
+			    curr_word = curr_word.slice(0, -1);
+			    document.getElementById("title_text").innerHTML = curr_word + '|';
+			    i--;
+			    setTimeout(typeWriter, back_speed*Math.random() + speed);
+			  }
+			  if (i == 0 && !forward) {
+			  	iter = 2;
+			  	forward = true;
+			  }
+			}
+			if (iter == 2){
+			  var txt_2 = txt[2];
+			  if (i < txt_2.length && forward) {
+			    curr_word += txt_2.charAt(i);
+			    document.getElementById("title_text").innerHTML = curr_word + '|';
+			    i++;
+			    setTimeout(typeWriter, forward_speed*Math.random() + speed);
+			  }
+			  if (i == txt_2.length){
+			  	document.getElementById("title_text").innerHTML = curr_word;
+			  	forward = false;
+			  }
+			  // if (i > 0 && !forward) {
+			  //   curr_word = curr_word.slice(0, -1);
+			  //   document.getElementById("title_text").innerHTML = curr_word + '|';
+			  //   i--;
+			  //   setTimeout(typeWriter, back_speed*Math.random() + speed);
+			  // }
+			  // if (i == 0 && !forward) {
+			  // 	iter = 3;
+			  // 	forward = true;
+			  
+			}
+		}
+		return typeWriter;
+	}
+	var title_words = ['Developer.', 'Data Engineer.', 'Data & Cloud Visionary.'];
+	typeWriterFinal = typeWriterWrapper(title_words, 50);
+	window.onload = typeWriterFinal();
+	// typeWriter1 = typeWriterWrapper('Data Engineer.', 50);
+	// typeWriter2 = typeWriterWrapper('Developer.', 50);
+	// typeWriter3 = typeWriterWrapper('AI Enthusiast.', 50);
+
+	// window.onload = typeWriterFinal();
+	// console.log(iter);
+	// if (iter == 0) {
+	// 	window.onload = typeWriter1();
+	// }
+	// console.log(iter);
+	// if (iter == 1){
+	// 	window.onload = typeWriterFinal();
+	// }
+
+
+	// window.onload = typeWriter1();
+</script>
+</html>
