@@ -202,10 +202,12 @@ body.loaded_2 .fadeIn_2 {
 }
 
 #card_content {
-	width: 39%;
+	width: 38%;
 	float: left;
 	text-align: center;
 	font-size: 1.5vw;
+	margin-left: 1%;
+	margin-right: 10px;
 	margin-top: 50px;
 }
 

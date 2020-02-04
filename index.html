@@ -31,14 +31,6 @@
             </div>
 
             <div class="sideBarLeft">
-<!--               <div class="sideBarFillIcon">
-                <a href="index.html">
-                  <div id="cf">
-                    <img class="bottom" src="./images/simple_house_maroon.png">
-                    <img class="top" src="./images/simple_house.png">
-                  </div>
-                </a>
-              </div> -->
               <div class="sideBarFillIcon">
                 <a href="https://github.com/Kylexi?tab=repositories">
                   <div id="cf">
@@ -48,7 +40,7 @@
                 </a>
               </div>
               <div class="sideBarFillIcon">
-                <a href="http://google.com">
+                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">
                   <div id="cf">
                     <img class="bottom" src="./images/linked_in_white.png">
                     <img class="top" src="./images/linked_in.png">
@@ -133,16 +125,6 @@
                       document.getElementById("title_text").innerHTML = curr_word;
                       forward = false;
                     }
-                    // if (i > 0 && !forward) {
-                    //   curr_word = curr_word.slice(0, -1);
-                    //   document.getElementById("title_text").innerHTML = curr_word + '|';
-                    //   i--;
-                    //   setTimeout(typeWriter, back_speed*Math.random() + speed);
-                    // }
-                    // if (i == 0 && !forward) {
-                    //  iter = 3;
-                    //  forward = true;
-                    
                   }
                 }
                 return typeWriter;
@@ -190,7 +172,7 @@
               </p>
 
               <p>
-                So, what value do I bring?
+                So, what value do I bring? (tl;dr)
               </p>
 
               <p>
@@ -206,27 +188,33 @@
             <section class="text">
               <div class="title">Projects, Employment, Awards</div>
               <div style="font-size: 1vw;">
-              <div class="card" onmouseover="hover('Blog of my two animals, Bailey and Kevin. Hosted on AWS S3 with HTML and CSS.')">
-                <img src="./images/the_kevining.png" alt="Avatar" style="width:100%">
-                <div class="container project">
-                  <h4><b>The Kevining</b></h4> 
-                  <p>Blog</p> 
+              <a href="http://thekevining.s3-website-us-east-1.amazonaws.com/">
+                <div class="card" onmouseover="hover('Blog of my two animals, Bailey and Kevin. Hosted on AWS S3 with HTML and CSS.')">
+                  <img src="./images/the_kevining.png" alt="Avatar" style="width:100%">
+                  <div class="container project">
+                    <h4><b>The Kevining</b></h4> 
+                    <p>Blog</p> 
+                  </div>
                 </div>
-              </div>
-              <div class="card" onmouseover="hover('LAMP-style application hosted in AWS with Django and Plotly to visualize baseball stats. Entire project is IaC (Infrastructure as Code) via Terraform. See git repo for details.')">
-                <img src="./images/diagram_with_numbers.png" alt="Avatar" style="width:100%">
-                <div class="container project">
-                  <h4><b>Legends of Baseball</b></h4> 
-                  <p>IaC-LAMP App</p> 
+              </a>
+              <a href="https://github.com/Kylexi/Kyball">
+                <div class="card" onmouseover="hover('LAMP-style application hosted in AWS with Django and Plotly to visualize baseball stats. Entire project is IaC (Infrastructure as Code) via Terraform. See git repo for details.')">
+                  <img src="./images/diagram_with_numbers.png" alt="Avatar" style="width:100%">
+                  <div class="container project">
+                    <h4><b>Legends of Baseball</b></h4> 
+                    <p>IaC-LAMP App</p> 
+                  </div>
                 </div>
-              </div>
-              <div class="card" onmouseover="hover('This very website! Hosted in S3. HTML, CSS, JavaScript, and graphic design. Click if you are feeling a bit recursive.')">
-                <img src="./images/website.png" alt="Avatar" style="width:100%">
-                <div class="container project">
-                  <h4><b>My Website</b></h4> 
-                  <p>Look around!</p> 
+              </a>
+              <a href="index.html">
+                <div class="card" onmouseover="hover('This very website! Hosted in S3. HTML, CSS, JavaScript, and graphic design. Click if you are feeling a bit recursive.')">
+                  <img src="./images/website.png" alt="Avatar" style="width:100%">
+                  <div class="container project">
+                    <h4><b>My Website</b></h4> 
+                    <p>Look around!</p> 
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="card" onmouseover="hover('Implementation of Snake in Java with plans to add Q-learning model in Python to teach a computer how to pseudo-optimally play the game. (Current work in progress)')">
                 <img src="./images/snake.png" alt="Avatar" style="width:100%">
                 <div class="container project">
@@ -255,7 +243,7 @@
                   <p>Operations Research</p> 
                 </div>
               </div>
-              <div onmouseover="hover('Outstanding Analytical Contributor Awarded for data engineering, ETL development, and novel data visualization. (Booz Allen Hamilton, November 27th, 2019) ')" class="card">
+              <div onmouseover="hover('Outstanding Analytical Contributor. Awarded for data engineering, ETL development, and novel data visualization. (Booz Allen Hamilton, November 27th, 2019) ')" class="card">
                 <img src="./images/bah.png" alt="Avatar" style="width:100%">
                 <div class="container award">
                   <h4><b>Booz Allen Hamilton</b></h4> 
@@ -275,10 +263,49 @@
           </script>
           </div>
           <div class="page" id="p4">
-            <section class="text"><div class="title">Tech</div></section>
+            <section class="text" style="text-align: center;">
+              <div class="title" style="margin-bottom: 70px;">
+                Technologies
+              </div>
+              <h2>
+                - Development & Scripting -
+              </h2>
+              <p>
+                Python, Java, JavaScript, HTML, CSS, Django, Pandas, Numpy
+              </p>
+              <h2>
+                - Data & Analytics -
+              </h2>
+              <p>
+                MySQL, PostgreSQL, DynamoDB, Tableau, Plotly
+              </p>
+              <h2>
+                - AWS Cloud -
+              </h2>
+              <p>
+                EC2, RDS, S3, Route53, Elastic Beanstalk, SQS, ASG, ELB, Security Groups, IAM, Billing  
+              </p>
+              <h2>
+                - DevOps -
+              </h2>
+              <p>
+                Windows, Linux basics (RHEL & Ubuntu), Docker & k8s basics, Terraform, Jenkins basics   
+              </p>
+            </section>
           </div>
           <div class="page" id="p5">
-            <section class="text"><div class="title">Contact Info</div></section>
+            <section class="text" style="text-align: center;">
+              <div class="title" style="margin-bottom: 150px">Contact Info</div>
+              <h2>
+                Matthew Campbell<br />
+                mmcampbell0@gmail.com<br />
+                <a href="./Resume.pdf">Resume</a><br />
+                Current Location: Reston, VA<br />
+                Contact for questions or project/work interest.<br /><br />
+                <a href="https://github.com/Kylexi?tab=repositories">GitHub</a><br />
+                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">LinkedIn</a>
+              </h2>
+            </section>
           </div> 
         </div>
       </div>
