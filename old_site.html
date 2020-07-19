@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="trans.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="./images/icon.png">
+<title>Matthew Campbell</title>
+</head>
+<body>
+<div class="ct" id="t1">
+  <div class="ct" id="t2">
+    <div class="ct" id="t3">
+      <div class="ct" id="t4">
+         <div class="ct" id="t5">
+          <div class="sideBarRight">
+            <ul id="menu">
+                <li class="icon sideBarFillText"></li>
+                <li class="icon sideBarFillText" id="uno"><a href="#t1"><div class="fadeIn_1">Home</div></a></li>
+                <li class="icon sideBarFillText" id="dos"><a href="#t2"><div class="fadeIn_1">About</div></a></li>
+                <li class="icon sideBarFillText" id="tres"><a href="#t3"><div class="fadeIn_1">Projects</div></a></li>
+                <li class="icon sideBarFillText" id="cuatro"><a href="#t4"><div class="fadeIn_1">Tech</div></a></li>
+                <li class="icon sideBarFillText" id="cinco"><a href="#t5"><div class="fadeIn_1">Contact</div></a>
+            </ul>
+          </div></li>
+          <div class="page1" id="p1">
+            <div class="background_geom_1">
+              <img src="./images/geometry.png">
+            </div>
+            <div class="background_geom_2">
+              <img src="./images/geometry.png">
+            </div>
+            <div class="sideBarLeft fadeIn_1">
+              <div class="sideBarFillIcon">
+                <a href="https://github.com/Kylexi?tab=repositories">
+                  <div id="cf">
+                    <img class="bottom" src="./images/git_logo_white.png">
+                    <img class="top" src="./images/git_logo.png">
+                  </div>
+                </a>
+              </div>
+              <div class="sideBarFillIcon">
+                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">
+                  <div id="cf">
+                    <img class="bottom" src="./images/linked_in_white.png">
+                    <img class="top" src="./images/linked_in.png">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="firstDiv">
+              <!-- Centered main text of page -->
+              <div class = "fadeIn_1">
+                <div class = "fadeIn_2"><div id="name_text">Matthew Campbell</div>
+                <div id="title_text">|</div></div>
+              </div>
+            </div>
+
+            <script>
+              var i = 0;
+              var curr_word = '';
+              var forward = true;
+              var forward_speed = 500;
+              var back_speed = 100;
+              var iter = 0;
+              function typeWriterWrapper(txt, speed) {
+
+                function typeWriter() {
+                  if (iter == 0){
+                    var txt_1 = txt[0];
+                    if (i < txt_1.length && forward) {
+                      curr_word += txt_1.charAt(i);
+                      document.getElementById("title_text").innerHTML = curr_word + '|';
+                      i++;
+                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
+                    }
+                    if (i == txt_1.length){
+                      document.getElementById("title_text").innerHTML = curr_word;
+                      forward = false;
+                    }
+                    if (i > 0 && !forward) {
+                      curr_word = curr_word.slice(0, -1);
+                      document.getElementById("title_text").innerHTML = curr_word + '|';
+                      i--;
+                      setTimeout(typeWriter, back_speed*Math.random() + speed);
+                    }
+                    if (i == 0 && !forward) {
+                      iter = 1;
+                      forward = true;
+                    }
+                  }
+                  if (iter == 1){
+                    var txt_2 = txt[1];
+                    if (i < txt_2.length && forward) {
+                      curr_word += txt_2.charAt(i);
+                      document.getElementById("title_text").innerHTML = curr_word + '|';
+                      i++;
+                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
+                    }
+                    if (i == txt_2.length){
+                      document.getElementById("title_text").innerHTML = curr_word;
+                      forward = false;
+                      setTimeout(typeWriter, 15000);
+                    }
+                    if (i > 0 && !forward) {
+                      curr_word = curr_word.slice(0, -1);
+                      document.getElementById("title_text").innerHTML = curr_word + '|';
+                      i--;
+                      setTimeout(typeWriter, back_speed*Math.random() + speed);
+                    }
+                    if (i == 0 && !forward) {
+                      iter = 2;
+                      forward = true;
+                    }
+                  }
+                  if (iter == 2){
+                    var txt_2 = txt[2];
+                    if (i < txt_2.length && forward) {
+                      curr_word += txt_2.charAt(i);
+                      document.getElementById("title_text").innerHTML = curr_word + '|';
+                      i++;
+                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
+                    }
+                    if (i == txt_2.length){
+                      document.getElementById("title_text").innerHTML = curr_word;
+                      forward = false;
+                    }
+                  }
+                }
+                return typeWriter;
+              }
+              var title_words = ['Mathematics ', 'Algorithms ', 'Data Science & Cloud'];
+              typeWriterFinal = typeWriterWrapper(title_words, 30);
+              window.onload = setTimeout(typeWriterFinal, 1500);
+            </script>
+            <script>
+              window.onload = setTimeout(function() {
+                  // document.body.className += " loaded";
+                  document.body.classList.add("loaded_1");
+              }, 500)
+            </script>
+            <script>
+              window.onload = setTimeout(function() {
+                  // document.body.className += " loaded";
+                  document.body.classList.add("loaded_2");
+              }, 6800)
+            </script> 
+          </div> 
+          <!-- </div> -->
+          <div class="page" id="p2">
+            <section class="text">
+              <div class="title">
+                About
+              </div>
+              <div>
+              <p>
+                If you are looking for a list of programming competencies, continue to the technologies section. I myself do not put much weight in that sort of thing. If you'd like to read what <i>value</i> I believe I bring, then read on.
+              </p>
+
+              <p>
+                Upon joining the workforce, I was dismayed by the thought that my B.S. and M.S. in mathematics were foolish choices when employment clearly lies in data science. Those with a computer science degree had a leg up on me with credentialized knowledge of algorithms, and those who entered I.T. immediately after high school had years of practical experience. I was at a loss. In distraught and with only Python experience, I began picking up new skills.
+              </p>
+
+              <p>
+                Cloud, data, and machine learning. Those were my targets. Ambitious? Yes. A gigantic amount to learn? Absolutely.
+              </p>
+
+              <p>
+                I started out with online introductions via Udemy, etc., but quickly realized that learning through building was the way to go. My GitHub push frequency, AWS usage, code fluency, and data understanding all started to climb.
+              </p>
+              <p>
+                The more I went on, the more I realized what my degrees had really given me. Instead of struggling to pick up new skills and getting bogged down in one way of doing things, my background allowed me to see the bigger, more abstract form of data science and programming.
+              </p>
+
+              <p>
+                So, what value do I bring? (tl;dr)
+              </p>
+
+              <p>
+                Any technologies or skills required to get a job done can quickly be integrated into my arsenal. I understand underlying structures and ideas; I don't waste my own time memorizing small tidbits of info that anyone can just Google. This makes me mentally agile and flexible.
+              </p>
+
+              <p>
+                Open to freelance and employment, large and small projects, and a preference towards remote work, contact me to bring a thinker onto your team. 
+              </p>
+              </div>
+            </section>
+          </div>  
+          <div class="page" id="p3">
+            <section class="text">
+              <div class="title">Projects, Employment, Awards</div>
+              <div style="font-size: 1vw;">
+              <a href="http://thekevining.s3-website-us-east-1.amazonaws.com/">
+                <div class="card" onmouseover="hover('Blog of my two animals, Bailey and Kevin. Hosted on AWS S3 with HTML and CSS.')">
+                  <img src="./images/the_kevining.png" alt="thekevining">
+                  <div class="container project">
+                    <h4><b>The Kevining</b></h4> 
+                    <p>Blog</p> 
+                  </div>
+                </div>
+              </a>
+              <a href="https://github.com/Kylexi/Kyball">
+                <div class="card" onmouseover="hover('LAMP-style application hosted in AWS with Django and Plotly to visualize baseball stats. Entire project is IaC (Infrastructure as Code) via Terraform. See git repo for details.')">
+                  <img src="./images/diagram_with_numbers.png" alt="legends of baseball">
+                  <div class="container project">
+                    <h4><b>Legends of Baseball</b></h4> 
+                    <p>IaC-LAMP App</p> 
+                  </div>
+                </div>
+              </a>
+              <a href="index.html">
+                <div class="card" onmouseover="hover('This very website! Hosted in S3. HTML, CSS, JavaScript, and graphic design. Python script in repo to automatically deploy to S3 from shell. Click if you are feeling a bit recursive.')">
+                  <img src="./images/website.png" alt="this website">
+                  <div class="container project">
+                    <h4><b>My Website</b></h4> 
+                    <p>Look around!</p> 
+                  </div>
+                </div>
+              </a>
+              <a href="https://github.com/Kylexi/SnakeAI">
+                <div class="card" onmouseover="hover('Simple implementation of Snake with a score tracker in SQLite. (Current work in progress)')">
+                  <img src="./images/snake.png" alt="snake ai">
+                  <div class="container project">
+                    <h4><b>Simple Snake</b></h4> 
+                    <p>Java, SQLite App</p> 
+                  </div>
+                </div>
+              </a>
+              <div class="card" onmouseover="hover('Researched numerical monoids and their relevance to advanced abstract algebra proofs. Extended the knowledge of monoids with an original proof contribution. (Summer 2014)')">
+                <img src="./images/monoid.png" alt="PURE math">
+                <div class="container work">
+                  <h4><b>University of Hawaii</b></h4> 
+                  <p>Research Intern</p> 
+                </div>
+              </div>
+              <div class="card" onmouseover="hover('Developed Python applications and ETL pipelines to analyze the Protein Data Bank. Studied cutting edge algorithms in protein topologies and denaturation. (January 2018 - June 2019)')">
+                <img src="./images/s3i.png" alt="s3i">
+                <div class="container work">
+                  <h4><b>S3I LLC</b></h4> 
+                  <p>Data Scientist</p> 
+                </div>
+              </div>
+              <div class="card" onmouseover="hover('Created ETL pipelines and data visualizations. Presented analytic results to audiences of varying data backgrounds at several levels of business. (June 2019 - Present)')">
+                <img src="./images/bah.png" alt="bah">
+                <div class="container work">
+                  <h4><b>Booz Allen Hamilton</b></h4> 
+                  <p>Operations Research</p> 
+                </div>
+              </div>
+              <div onmouseover="hover('Outstanding Analytical Contributor. Awarded for data engineering, ETL development, and novel data visualization. (Booz Allen Hamilton, November 27th, 2019) ')" class="card">
+                <img src="./images/bah.png" alt="bah">
+                <div class="container award">
+                  <h4><b>Booz Allen Hamilton</b></h4> 
+                  <p>Analytics Award</p> 
+                </div>
+              </div>
+              <div id="card_content">
+                Mouse over to see more details.
+              </div>
+              </div>
+            </section>
+          <script>
+              function hover(description) {
+                  console.log(description);
+                  document.getElementById('card_content').innerHTML = description;
+              }
+          </script>
+          </div>
+          <div class="page" id="p4">
+            <section class="text" style="text-align: center;">
+              <div class="title" style="margin-bottom: 70px;">
+                Technologies
+              </div>
+              <h2>
+                - Development & Scripting -
+              </h2>
+              <p>
+                Python, Java, JavaScript, HTML, CSS, Django, Pandas, Numpy
+              </p>
+              <h2>
+                - Data & Analytics -
+              </h2>
+              <p>
+                MySQL, PostgreSQL, DynamoDB, Redis, Tableau, Plotly
+              </p>
+              <h2>
+                - AWS Cloud -
+              </h2>
+              <p>
+                EC2, RDS, S3, Route53, Elastic Beanstalk, SQS, ASG, ELB, Security Groups, IAM, Billing  
+              </p>
+              <h2>
+                - DevOps -
+              </h2>
+              <p>
+                Git, Windows, Linux basics (RHEL & Ubuntu), Docker & k8s basics, Terraform, Jenkins basics, Jira, Confluence   
+              </p>
+            </section>
+          </div>
+          <div class="page" id="p5">
+            <section class="text" style="text-align: center;">
+              <div class="title" style="margin-bottom: 150px">Contact Info</div>
+              <h2>
+                Matthew Campbell<br />
+                mmcampbell0@gmail.com<br />
+                Current Location: Reston, VA<br />
+                Contact for questions or project/work interest.<br /><br />
+                <a href="./Resume.pdf">Resume</a><br />
+                <a href="https://github.com/Kylexi?tab=repositories">GitHub</a><br />
+                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">LinkedIn</a>
+              </h2>
+            </section>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,320 +1,267 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="trans.css">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="icon" href="./images/icon.png">
-<title>Matt Campbell</title>
+  <link rel="icon" href="./images/icon.png">
+  <title>Matthew Campbell</title>
 </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url(./imgs/grassy_mountain.jpg);
+  min-height: 800px;
+  max-height: 600px;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("./imgs/back1.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("./imgs/back2.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1200px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
 <body>
-<div class="ct" id="t1">
-  <div class="ct" id="t2">
-    <div class="ct" id="t3">
-      <div class="ct" id="t4">
-         <div class="ct" id="t5">
-          <div class="sideBarRight">
-            <ul id="menu">
-                <li class="icon sideBarFillText"></li>
-                <li class="icon sideBarFillText" id="uno"><a href="#t1"><div class="fadeIn_1"><div class="fadeIn_2">Home</div></div></a></li>
-                <li class="icon sideBarFillText" id="dos"><a href="#t2"><div class="fadeIn_1"><div class="fadeIn_2">About</div></div></a></li>
-                <li class="icon sideBarFillText" id="tres"><a href="#t3"><div class="fadeIn_1"><div class="fadeIn_2">Projects</div></div></a></li>
-                <li class="icon sideBarFillText" id="cuatro"><a href="#t4"><div class="fadeIn_1"><div class="fadeIn_2">Tech</div></div></a></li>
-                <li class="icon sideBarFillText" id="cinco"><a href="#t5"><div class="fadeIn_1"><div class="fadeIn_2">Contact</div></div></a>
-            </ul>
-          </div></li>
-          <div class="page1" id="p1">
-            <div class="background_geom_1">
-              <img src="./images/geometry.png">
-            </div>
-            <div class="background_geom_2">
-              <img src="./images/geometry.png">
-            </div>
-            <div class="sideBarLeft fadeIn_1">
-              <div class="sideBarFillIcon">
-                <a href="https://github.com/Kylexi?tab=repositories">
-                  <div id="cf">
-                    <img class="bottom" src="./images/git_logo_white.png">
-                    <img class="top" src="./images/git_logo.png">
-                  </div>
-                </a>
-              </div>
-              <div class="sideBarFillIcon">
-                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">
-                  <div id="cf">
-                    <img class="bottom" src="./images/linked_in_white.png">
-                    <img class="top" src="./images/linked_in.png">
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="firstDiv">
-              <!-- Centered main text of page -->
-              <div class = "fadeIn_1">
-                <div class = "fadeIn_2"><div id="name_text">Matt Campbell</div>
-                <div id="title_text">|</div></div>
-              </div>
-            </div>
 
-            <script>
-              var i = 0;
-              var curr_word = '';
-              var forward = true;
-              var forward_speed = 500;
-              var back_speed = 100;
-              var iter = 0;
-              function typeWriterWrapper(txt, speed) {
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
 
-                function typeWriter() {
-                  if (iter == 0){
-                    var txt_1 = txt[0];
-                    if (i < txt_1.length && forward) {
-                      curr_word += txt_1.charAt(i);
-                      document.getElementById("title_text").innerHTML = curr_word + '|';
-                      i++;
-                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
-                    }
-                    if (i == txt_1.length){
-                      document.getElementById("title_text").innerHTML = curr_word;
-                      forward = false;
-                    }
-                    if (i > 0 && !forward) {
-                      curr_word = curr_word.slice(0, -1);
-                      document.getElementById("title_text").innerHTML = curr_word + '|';
-                      i--;
-                      setTimeout(typeWriter, back_speed*Math.random() + speed);
-                    }
-                    if (i == 0 && !forward) {
-                      iter = 1;
-                      forward = true;
-                    }
-                  }
-                  if (iter == 1){
-                    var txt_2 = txt[1];
-                    if (i < txt_2.length && forward) {
-                      curr_word += txt_2.charAt(i);
-                      document.getElementById("title_text").innerHTML = curr_word + '|';
-                      i++;
-                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
-                    }
-                    if (i == txt_2.length){
-                      document.getElementById("title_text").innerHTML = curr_word;
-                      forward = false;
-                      setTimeout(typeWriter, 15000);
-                    }
-                    if (i > 0 && !forward) {
-                      curr_word = curr_word.slice(0, -1);
-                      document.getElementById("title_text").innerHTML = curr_word + '|';
-                      i--;
-                      setTimeout(typeWriter, back_speed*Math.random() + speed);
-                    }
-                    if (i == 0 && !forward) {
-                      iter = 2;
-                      forward = true;
-                    }
-                  }
-                  if (iter == 2){
-                    var txt_2 = txt[2];
-                    if (i < txt_2.length && forward) {
-                      curr_word += txt_2.charAt(i);
-                      document.getElementById("title_text").innerHTML = curr_word + '|';
-                      i++;
-                      setTimeout(typeWriter, forward_speed*Math.random() + speed);
-                    }
-                    if (i == txt_2.length){
-                      document.getElementById("title_text").innerHTML = curr_word;
-                      forward = false;
-                    }
-                  }
-                }
-                return typeWriter;
-              }
-              var title_words = ['Mathematics ', 'Algorithms ', 'Data, Cloud, AI.'];
-              typeWriterFinal = typeWriterWrapper(title_words, 50);
-              window.onload = setTimeout(typeWriterFinal, 2500);
-            </script>
-            <script>
-              window.onload = setTimeout(function() {
-                  // document.body.className += " loaded";
-                  document.body.classList.add("loaded_1");
-              }, 500)
-            </script>
-            <script>
-              window.onload = setTimeout(function() {
-                  // document.body.className += " loaded";
-                  document.body.classList.add("loaded_2");
-              }, 8500)
-            </script> 
-          </div> 
-          <!-- </div> -->
-          <div class="page" id="p2">
-            <section class="text">
-              <div class="title">
-                About
-              </div>
-              <div>
-              <p>
-                If you are looking for a list of programming competencies, continue to the technologies section. I myself do not put much weight in that sort of thing. If you'd like to read what <i>value</i> I believe I bring, then read on.
-              </p>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
 
-              <p>
-                Upon joining the workforce, I was dismayed by the thought that my B.S. and M.S. in mathematics were foolish choices when employment clearly lies in data science. Those with a computer science degree had a leg up on me with credentialized knowledge of algorithms, and those who entered I.T. immediately after high school had years of practical experience. I was at a loss. In distraught and with only Python experience, I began picking up new skills.
-              </p>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">M<span class="w3-hide-small">atthew</span> Campbell</span>
+  </div>
+</div>
 
-              <p>
-                Cloud, data, and machine learning. Those were my targets. Ambitious? Yes. A gigantic amount to learn? Absolutely.
-              </p>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT</h3>
+  <p>Welcome to my portfolio. I am, among many things, a data scientist. This term is vague due to the current AI bubble in tech, so let me clarify: I enjoy building/fine-tuning predictive models and working with raw data as a means to add value to businesses and individual lives. Generally, my interests lie in utilizing machine learning in novel ways, but I'm also partial to programming and computers as a whole.
+  </p>
 
-              <p>
-                I started out with online introductions via Udemy, etc., but quickly realized that learning through building was the way to go. My GitHub push frequency, AWS usage, code fluency, and data understanding all started to climb.
-              </p>
-              <p>
-                The more I went on, the more I realized what my degrees had really given me. Instead of struggling to pick up new skills and getting bogged down in one way of doing things, my background allowed me to see the bigger, more abstract form of data science and programming.
-              </p>
+  <p></p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="./imgs/shades2.jpg" class="w3-round w3-image" alt="Photo of Me" height="100%">
+    </div>
 
-              <p>
-                So, what value do I bring? (tl;dr)
-              </p>
-
-              <p>
-                Any technologies or skills required to get a job done can quickly be integrated into my arsenal. I understand underlying structures and ideas; I don't waste my own time memorizing small tidbits of info that anyone can just Google. This makes me mentally agile and flexible.
-              </p>
-
-              <p>
-                Open to freelance and employment, large and small projects, and a preference towards remote work, contact me to bring a thinker onto your team. 
-              </p>
-              </div>
-            </section>
-          </div>  
-          <div class="page" id="p3">
-            <section class="text">
-              <div class="title">Projects, Employment, Awards</div>
-              <div style="font-size: 1vw;">
-              <a href="http://thekevining.s3-website-us-east-1.amazonaws.com/">
-                <div class="card" onmouseover="hover('Blog of my two animals, Bailey and Kevin. Hosted on AWS S3 with HTML and CSS.')">
-                  <img src="./images/the_kevining.png" alt="thekevining" style="width:100%">
-                  <div class="container project">
-                    <h4><b>The Kevining</b></h4> 
-                    <p>Blog</p> 
-                  </div>
-                </div>
-              </a>
-              <a href="https://github.com/Kylexi/Kyball">
-                <div class="card" onmouseover="hover('LAMP-style application hosted in AWS with Django and Plotly to visualize baseball stats. Entire project is IaC (Infrastructure as Code) via Terraform. See git repo for details.')">
-                  <img src="./images/diagram_with_numbers.png" alt="legends of baseball" style="width:100%">
-                  <div class="container project">
-                    <h4><b>Legends of Baseball</b></h4> 
-                    <p>IaC-LAMP App</p> 
-                  </div>
-                </div>
-              </a>
-              <a href="index.html">
-                <div class="card" onmouseover="hover('This very website! Hosted in S3. HTML, CSS, JavaScript, and graphic design. Python script in repo to automatically deploy to S3 from shell. Click if you are feeling a bit recursive.')">
-                  <img src="./images/website.png" alt="this website" style="width:100%">
-                  <div class="container project">
-                    <h4><b>My Website</b></h4> 
-                    <p>Look around!</p> 
-                  </div>
-                </div>
-              </a>
-              <a href="https://github.com/Kylexi/SnakeAI">
-                <div class="card" onmouseover="hover('Simple implementation of Snake with a score tracker in SQLite. (Current work in progress)')">
-                  <img src="./images/snake.png" alt="snake ai" style="width:100%">
-                  <div class="container project">
-                    <h4><b>Simple Snake</b></h4> 
-                    <p>Java, SQLite App</p> 
-                  </div>
-                </div>
-              </a>
-              <div class="card" onmouseover="hover('Researched numerical monoids and their relevance to advanced abstract algebra proofs. Extended the knowledge of monoids with an original proof contribution. (Summer 2014)')">
-                <img src="./images/monoid.png" alt="PURE math" style="width:100%">
-                <div class="container work">
-                  <h4><b>University of Hawaii</b></h4> 
-                  <p>Research Intern</p> 
-                </div>
-              </div>
-              <div class="card" onmouseover="hover('Developed Python applications and ETL pipelines to analyze the Protein Data Bank. Studied cutting edge algorithms in protein topologies and denaturation. (January 2018 - June 2019)')">
-                <img src="./images/s3i.png" alt="s3i" style="width:100%">
-                <div class="container work">
-                  <h4><b>S3I LLC</b></h4> 
-                  <p>Data Scientist</p> 
-                </div>
-              </div>
-              <div class="card" onmouseover="hover('Created ETL pipelines and data visualizations. Presented analytic results to audiences of varying data backgrounds at several levels of business. (June 2019 - Present)')">
-                <img src="./images/bah.png" alt="bah" style="width:100%">
-                <div class="container work">
-                  <h4><b>Booz Allen Hamilton</b></h4> 
-                  <p>Operations Research</p> 
-                </div>
-              </div>
-              <div onmouseover="hover('Outstanding Analytical Contributor. Awarded for data engineering, ETL development, and novel data visualization. (Booz Allen Hamilton, November 27th, 2019) ')" class="card">
-                <img src="./images/bah.png" alt="bah" style="width:100%">
-                <div class="container award">
-                  <h4><b>Booz Allen Hamilton</b></h4> 
-                  <p>Analytics Award</p> 
-                </div>
-              </div>
-              <div id="card_content">
-                Mouse over to see more details.
-              </div>
-              </div>
-            </section>
-          <script>
-              function hover(description) {
-                  console.log(description);
-                  document.getElementById('card_content').innerHTML = description;
-              }
-          </script>
-          </div>
-          <div class="page" id="p4">
-            <section class="text" style="text-align: center;">
-              <div class="title" style="margin-bottom: 70px;">
-                Technologies
-              </div>
-              <h2>
-                - Development & Scripting -
-              </h2>
-              <p>
-                Python, Java, JavaScript, HTML, CSS, Django, Pandas, Numpy
-              </p>
-              <h2>
-                - Data & Analytics -
-              </h2>
-              <p>
-                MySQL, PostgreSQL, DynamoDB, Redis, Tableau, Plotly
-              </p>
-              <h2>
-                - AWS Cloud -
-              </h2>
-              <p>
-                EC2, RDS, S3, Route53, Elastic Beanstalk, SQS, ASG, ELB, Security Groups, IAM, Billing  
-              </p>
-              <h2>
-                - DevOps -
-              </h2>
-              <p>
-                Git, Windows, Linux basics (RHEL & Ubuntu), Docker & k8s basics, Terraform, Jenkins basics, Jira, Confluence   
-              </p>
-            </section>
-          </div>
-          <div class="page" id="p5">
-            <section class="text" style="text-align: center;">
-              <div class="title" style="margin-bottom: 150px">Contact Info</div>
-              <h2>
-                Matthew Campbell<br />
-                mmcampbell0@gmail.com<br />
-                Current Location: Reston, VA<br />
-                Contact for questions or project/work interest.<br /><br />
-                <a href="./Resume.pdf">Resume</a><br />
-                <a href="https://github.com/Kylexi?tab=repositories">GitHub</a><br />
-                <a href="https://www.linkedin.com/in/matthew-campbell-09849393/">LinkedIn</a>
-              </h2>
-            </section>
-          </div> 
-        </div>
-      </div>
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6">
+      <p>Don't mistake me for that nerd who codes in the basement into the late hours and cannot interact with the bulk of society. I take pleasure in conveying and demonstrating complex ideas to groups of all backgrounds. Be it the colleague with a PhD in physics, the investor with economic know-how, or the five year old trying to satiate his curiosity, I strive to bring clarity to obfuscated concepts. Knowing how to apply machine learning and statistical models is only half the battle; the other half (which is becoming more and more important as data science itself becomes accessible to all) is convincing others why conclusions are so.</p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Skills (not exhaustive)</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center">
+      <p class="w3-wide">Python</p>
+      <p class="w3-wide">Machine Learning</p>
+      <p class="w3-wide">Data Pipelines</p>
+      <p class="w3-wide">Databases</p>
+    </div>
+    <div class="w3-col m6 w3-center">
+      <p class="w3-wide">Basic DevOps</p>
+      <p class="w3-wide">Cloud (AWS)</p>
+      <p class="w3-wide">Mathematics</p>
+      <p class="w3-wide">Research</p>
     </div>
   </div>
 </div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-wide" style="color: white">PROJECTS</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  
+  <h3 class="w3-center">Professional</h3>
+  <p class="w3-center"><em>Click on the images for details.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="./imgs/protein.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="S3I LLC Data Scientist, Jan 2018 - June 2019. Research effort to selectively denature proteins harmful to humans, an alternative to chemical-based medicinal approaches. Created Python data pipelines to process the <a href='https://www.rcsb.org/'>Protein Data Bank</a>. Implemented and automated biological algorithms from break-through papers to determine physical properties of proteins.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/ffx.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, July 2019 - Jan 2020. Developed data pipelines, analysis, and novel visualizations for the Fairfax County Fire & Rescue team. Effort was to recommend a redistribution of emergency vehicles in order to better minimize average response times to incidents. Major tools used were Python and Tableau. *Won award on the project for novel visualizations and efficient data pipelining.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/cla.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - June 2020. Led development of Excel-based, goal-programming tool to address the best way to distribute linguists within the Navy and Marine Corps. Integrated open-source tools to expand the capabilities of Excel's 'solver' to meet the scale of the optimization problem. *Won award on the project for implementation effectiveness, ability to communicate the concepts of the algorithm to both teammates and clients, and for smooth model runs throughout the projects lifecycle.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/dasa.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - July 2020. Led development of Python codebase to rebaseline the Common Workforce Analysis Tool (CWAT), a workforce-workload analysis tool (Excel) utilized by many branches within the government for Foreign Military Sales. Codebase included a data pipeline, a stock-flow model, Plotly graphics, a dynamic <a href='https://docs.streamlit.io/en/latest/index.html#'>Streamlit</a> dashboard, and intensive flexibility within each feature in order to experiment with variable exploration and CWAT model assumptions.">
+    </div>
+  </div>
+
+  <h3 class="w3-center">Recreational</h3>
+  <p class="w3-center"><em>My personal projects that I work on in my free time.</em></p>
+
+  <div class="w3-row-padding w3-center w3-section">
+    
+    <div class="w3-col m3">
+      <img src="./imgs/ebay.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="Current <a href='https://github.com/Kylexi/ebuy'>work-in-progress</a>. Developing predictive model to estimate selling price of an item up for bid on Ebay. Intending to use CNN to process item image, RNN for item text, and overall linear regression or random tree regressor to predict final price. Utilizing Python, the Ebay API, and Linux CRON-jobs to build out my dataset automatically and on a daily basis to have data at many different points in time before they sell.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/stack.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="Built a <a href='https://github.com/Kylexi/ensemblenet'>custom stacking CNN model</a> to predict images from the Dogs vs Cats dataset, achieving total accuracy (balanced dataset) of just over 94%, a notable accomplishment on this dataset. Wrote an <a href='https://medium.com/@mmcampbell0/stacking-convolutional-neural-nets-c1e9dded5ce3'>article on Medium</a> documenting the process and providing intuition for the idea of stacking models.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/kyball.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="My dip into the DevOps world, I built automated infrastructure to create/terminate a LAMP-stack (including writing to the database itself!) and host it via AWS elastic beanstalk. IaC was done through Terraform. The website to view the LAMP stack is usually down to minimize personal costs, but the idea is well-laid out in the above image as well as the <a href='https://github.com/Kylexi/Kyball'>GitHub page</a>.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/website.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='./old_site.html'>The last iteration</a> of my website. This one has some neat animations and feels more like a dashboard; however, it is not as responsive and does not fair well on small screens (phones/tablets). The current iteration aims to fix those issues as well as present more professionally.">
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-white" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+    <img id="img01" class="w3-image" height="70%" width="70%">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-wide" style="color: white">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <p class="w3-center"><em>Get in touch with me. Open to new opportunities and feedback.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Reston, VA<br>
+        <i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> (928) 814-2535<br>
+        <i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i> mmcampbell0@gmail.com<br>
+        <i class="fa fa-linkedin fa-fw w3-xlarge w3-margin-right"></i> <a href='https://linkedin.com/in/matthewcampbell0'>LinkedIn</a> <br>
+        <i class="fa fa-file-text fa-fw w3-xlarge w3-margin-right"></i> <a href="./Resume.pdf">Resume</a><br />
+      </div>
+      <!-- Maybe include this later on -->
+      <!-- <p>Or message me from here.</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form> -->
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <a href='https://www.facebook.com/profile.php?id=100006940772183'><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href='https://github.com/Kylexi'><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href='https://linkedin.com/in/matthewcampbell0'><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Top</a>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
 </html>
