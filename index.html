@@ -37,7 +37,7 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url(./imgs/grassy_mountain.jpg);
+  background-image: url(./imgs/grassy_mountain_magick.jpg);
   min-height: 800px;
   max-height: 600px;
 }
@@ -90,45 +90,51 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">M<span class="w3-hide-small">atthew</span> Campbell</span>
+  	<br></br><br></br><br></br><br></br><br></br><br></br>
+    <p><div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">M<span class="w3-hide-small">atthew</span> Campbell</div></p>
+    <p><div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Data<span class="w3-hide-small"> Scientist</span></div></p>
   </div>
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-center">
-	<video width="750" height="775" margin='auto' autoplay loop muted>
-  		<source src="bayes_demo.mp4" type="video/mp4" />
-	</video>
-</div>
 <div class="w3-content w3-container w3-padding-64" id="about">
+  <hr style="height:1px;border:none;color:#333;background-color:#333;" >
   <h3 class="w3-center">ABOUT</h3>
-  <p>Welcome to my portfolio. I am, among many things, a data scientist. This term is vague due to the current AI bubble in tech, so let me clarify: I enjoy building/fine-tuning predictive models and working with raw data as a means to add value to businesses and individual lives. Generally, my interests lie in utilizing machine learning in novel ways, but I'm also partial to programming and computers as a whole.
+  <p>Welcome to my portfolio. I am, among many things, a data scientist. I enjoy building/fine-tuning predictive models and working with raw data as a means to add value to businesses and individual lives. I'm also partial to programming (particularly automation), visualization, and teaching others.
   </p>
 
   <p></p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="./imgs/shades2.jpg" class="w3-round w3-image" alt="Photo of Me" height="100%">
-    </div>
+		<video width="100%" margin='auto' autoplay loop muted>
+	  		<source src="imgs/bayes_demo4.mp4" type="video/mp4" />
+		</video>
+	</div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6">
-      <p>Don't mistake me for that nerd who codes in the basement into the late hours and cannot interact with the bulk of society. I take pleasure in conveying and demonstrating complex ideas to groups of all backgrounds. Be it the colleague with a PhD in physics, the investor with economic know-how, or the five year old trying to satiate his curiosity, I strive to bring clarity to obfuscated concepts. Knowing how to apply machine learning and statistical models is only half the battle; the other half (which is becoming more and more important as data science itself becomes accessible to all) is convincing others why conclusions are so.</p>
+      <p>However, I'm not just the nerd that can code in the basement into the late hours; I also take great pleasure in conveying and demonstrating complex ideas to people of all backgrounds. Knowing how to apply machine learning and statistical models is only half the battle; the other half (which is becoming more and more important as data science itself becomes accessible to all) is convincing others why conclusions are so.</p>
+
+      <p>For example, it doesn't do a mathematics layman any good when a modeler says "we're uncertain because your Bayesian prior wasn't informative and you had too little data". Instead, one should <em>show</em> the reasoning. To the left, you'll find an approach to conveying this kind of concept in a helpful, not-so-scary way. Check it out! </p>
+
+      <p>You'll notice that, as more data gets uncovered, in this case coin tosses to determine its "fairness", the distribution's peak becomes more and more pronounced (as does our certainty about the coin).
+      </p>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">Skills (not exhaustive)</p>
+  <hr style="height:1px;border:none;color:#333;background-color:#333;" >
+  <h3 class="w3-center">SKILLS</h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center">
-      <p class="w3-wide">Python</p>
-      <p class="w3-wide">Machine Learning</p>
-      <p class="w3-wide">Data Pipelines</p>
-      <p class="w3-wide">Databases</p>
+      <p>Python</p>
+      <p>Machine Learning</p>
+      <p>Databases</p>
+      <p>Automation</p>
     </div>
     <div class="w3-col m6 w3-center">
-      <p class="w3-wide">Basic DevOps</p>
-      <p class="w3-wide">Cloud (AWS)</p>
-      <p class="w3-wide">Mathematics</p>
-      <p class="w3-wide">Research</p>
+      <p>Visualization</p>
+      <p>Cloud (AWS)</p>
+      <p>Mathematics</p>
+      <p>Research</p>
     </div>
   </div>
 </div>
