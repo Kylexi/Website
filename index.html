@@ -99,8 +99,9 @@ body, html {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
 
-
+  
   <img src="./imgs/Feynman_quote.png" width=88% style="display: block; margin-left: auto; margin-right: auto">
+  <br><br>
   <hr style="height:1px;border:none;color:#333;background-color:#333;" >
   <h3 class="w3-center">ABOUT</h3>
   <p>Welcome to my portfolio. I am, among many things, a data scientist. I enjoy building/fine-tuning predictive models and working with raw data as a means to add value to businesses and individual lives. I'm also partial to programming (particularly automation), visualization, and teaching others.
@@ -118,7 +119,7 @@ body, html {
     <div class="w3-col m6">
       <p>However, I'm not just the nerd that can code in the basement into the late hours; I also take great pleasure in conveying and demonstrating complex ideas to people of all backgrounds. Knowing how to apply machine learning and statistical models is only half the battle; the other half (which is becoming more and more important as data science itself becomes accessible to all) is convincing others why conclusions are so.</p>
 
-      <p>For example, it doesn't do a mathematics layman any good when a modeler says "we're uncertain because your Bayesian prior wasn't informative and you had too little data". Instead, one should <em>show</em> the reasoning. To the left, you'll find an approach to conveying this kind of concept in a helpful, not-so-scary way. Check it out! </p>
+      <p>For example, it doesn't do a mathematics layman any good when a modeler says "we're uncertain because your Bayesian prior wasn't informative and you had too little data". Instead, one should <em>show</em> the reasoning. To the left, you'll find my custom approach to conveying this kind of concept in a helpful, not-so-scary way. Check it out! </p>
 
       <p>You'll notice that, as more data gets uncovered, in this case coin tosses to determine its "fairness", the distribution's peak becomes more and more pronounced (as does our certainty about the coin).
       </p>
@@ -140,8 +141,18 @@ body, html {
       <p>Research</p>
     </div>
   </div>
-</div>
+  <hr style="height:1px;border:none;color:#333;background-color:#333;" >
+  <h3 class="w3-center">CAREER</h3>
+    <div class="w3-left">
+      <br>
+      <p><b>Operations Research Analyst, Associate</b>. Booz Allen Hamilton, (January 2021 - Present)</p>
+      <br>
+      <p><b>Operations Research Analyst, Sr. Consultant</b>. Booz Allen Hamilton, (June 2019 - December 2020)</p>
+      <br>
+      <p><b>Data Scientist.</b> S3I LLC (biophysics start-up) (January 2018 - June 2019)</p>
+    </div>
 
+</div>
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -158,19 +169,18 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
+      <img src="./imgs/dasa.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - Oct 2020. Lead Operations Research Analyst for development on the Common Workforce Analysis Tool (CWAT), a workforce-workload analysis tool (Excel) utilized by many branches within the government involved in Foreign Military Sales. Tasks included frequent client interactions and demos, orchestrating large scale changes to the existing tool to meet the client's changing needs, and leading other supporting analysts in the effort. Python, Excel, Data visualization, Jira. <br><br>*Won award on the project for consistently successful explanations to the client and for bringing strong programming leadership to the team by introducing code review sessions and Python best-practices.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./imgs/cla.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - June 2020. Led development of Excel-based, goal-programming tool to address the best way to distribute linguists within the Navy and Marine Corps. Integrated open-source tools to expand the capabilities of Excel's 'solver' to meet the scale of the optimization problem. <br><br>*Won award on the project for implementation effectiveness, ability to communicate the concepts of the algorithm to both teammates and clients, and for smooth model runs throughout the projects lifecycle.">
+    </div>
+    <div class="w3-col m3">
+      <img src="./imgs/ffx.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, July 2019 - Jan 2020. Developed data pipelines, analysis, and novel visualizations for the Fairfax County Fire & Rescue team. Effort was to recommend a redistribution of emergency vehicles in order to better minimize average response times to incidents. Major tools used were Python and Tableau. <br><br>*Won award on the project for novel visualizations and efficient data pipelining.">
+    </div>
+
+    <div class="w3-col m3">
       <img src="./imgs/protein.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="S3I LLC Data Scientist, Jan 2018 - June 2019. Research effort to selectively denature proteins harmful to humans, an alternative to chemical-based medicinal approaches. Created Python data pipelines to process the <a href='https://www.rcsb.org/'>Protein Data Bank</a>. Implemented and automated biological algorithms from break-through papers to determine physical properties of proteins.">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="./imgs/ffx.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, July 2019 - Jan 2020. Developed data pipelines, analysis, and novel visualizations for the Fairfax County Fire & Rescue team. Effort was to recommend a redistribution of emergency vehicles in order to better minimize average response times to incidents. Major tools used were Python and Tableau. *Won award on the project for novel visualizations and efficient data pipelining.">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="./imgs/cla.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - June 2020. Led development of Excel-based, goal-programming tool to address the best way to distribute linguists within the Navy and Marine Corps. Integrated open-source tools to expand the capabilities of Excel's 'solver' to meet the scale of the optimization problem. *Won award on the project for implementation effectiveness, ability to communicate the concepts of the algorithm to both teammates and clients, and for smooth model runs throughout the projects lifecycle.">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="./imgs/dasa.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - July 2020. Led development of Python codebase to rebaseline the Common Workforce Analysis Tool (CWAT), a workforce-workload analysis tool (Excel) utilized by many branches within the government for Foreign Military Sales. Codebase included a data pipeline, a stock-flow model, Plotly graphics, a dynamic <a href='https://docs.streamlit.io/en/latest/index.html#'>Streamlit</a> dashboard, and intensive flexibility within each feature in order to experiment with variable exploration and CWAT model assumptions.">
     </div>
   </div>
 
@@ -180,7 +190,7 @@ body, html {
   <div class="w3-row-padding w3-center w3-section">
     
     <div class="w3-col m3">
-      <img src="./imgs/ebay.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="Current <a href='https://github.com/Kylexi/ebuy'>work-in-progress</a>. Developing predictive model to estimate selling price of an item up for bid on Ebay. Intending to use CNN to process item image, RNN for item text, and overall linear regression or random tree regressor to predict final price. Utilizing Python, the Ebay API, and Linux CRON-jobs to build out my dataset automatically and on a daily basis to have data at many different points in time before they sell.">
+      <img src="./imgs/ebuy.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://github.com/Kylexi/ebuy'>Ebuy Project (For lack of a better name)</a>. Developing predictive model to understand what drives selling price of the item 'Super Smash Bros Melee' up on Ebay. Built a webscraper to periodically obtain new data from Ebay and a data pipeline that feeds cleaned data into a PostgreSQL database. Modeled selling price using both a Lasso-penalized regression to assess which features drive price and a gradient boosted regression tree (<a href='https://catboost.ai'>CatBoost</a>) to better predict selling price. Data types included text, images, and real valued numbers.">
     </div>
 
     <div class="w3-col m3">
@@ -188,7 +198,7 @@ body, html {
     </div>
 
     <div class="w3-col m3">
-      <img src="./imgs/kyball.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="My dip into the DevOps world, I built automated infrastructure to create/terminate a LAMP-stack (including writing to the database itself!) and host it via AWS elastic beanstalk. IaC was done through Terraform. The website to view the LAMP stack is usually down to minimize personal costs, but the idea is well-laid out in the above image as well as the <a href='https://github.com/Kylexi/Kyball'>GitHub page</a>.">
+      <img src="./imgs/kyball.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="My dip into the DevOps world; I built automated infrastructure to create/terminate a LAMP-stack (including writing to the database itself!) and host it via AWS elastic beanstalk. IaC was done through Terraform. The website to view the LAMP stack is usually down to minimize personal costs, but the idea is well-laid out in the above image as well as the <a href='https://github.com/Kylexi/Kyball'>GitHub page</a>.">
     </div>
 
     <div class="w3-col m3">
@@ -249,7 +259,7 @@ body, html {
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <div class="w3-xlarge w3-section">
-    <a href='https://www.facebook.com/profile.php?id=100006940772183'><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    
     <a href='https://github.com/Kylexi'><i class="fa fa-github w3-hover-opacity"></i></a>
     <a href='https://linkedin.com/in/matthewcampbell0'><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </div>
