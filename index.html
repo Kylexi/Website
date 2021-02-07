@@ -39,8 +39,9 @@ body, html {
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url("./imgs/turq.jpg");
-  min-height: 605px;
-  max-height: 700px;
+  /*min-height: 750px;
+  max-height: 800px;*/
+  height: 100%;
 }
 
 /* Second image (Portfolio) */
@@ -91,7 +92,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-  	<br></br><br></br><br>
+  	<br></br>
     <p><div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">M<span class="w3-hide-small">atthew</span> Campbell</div></p>
     <p><div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Data<span class="w3-hide-small"> Scientist</span></div></p>
   </div>
@@ -99,11 +100,7 @@ body, html {
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-
-  
-  <img src="./imgs/Feynman_quote.png" width=88% style="display: block; margin-left: auto; margin-right: auto">
-  <br><br>
-  <hr style="height:1px;border:none;color:#333;background-color:#333;" >
+  <!-- <hr style="height:1px;border:none;color:#333;background-color:#333;" > -->
   <h3 class="w3-center">ABOUT</h3>
   <p>Welcome to my portfolio. I am, among many things, a data scientist. I enjoy building/fine-tuning predictive models and working with raw data as a means to add value to businesses and individual lives. I'm also partial to programming (particularly automation), visualization, and teaching others.
   </p>
@@ -260,6 +257,8 @@ body, html {
       </form> -->
     </div>
   </div>
+  <!-- <img src="./imgs/grassy_mountain.jpg" width=88% style="display: block; margin-left: auto; margin-right: auto"> -->
+  <img src="./imgs/Feynman_quote.png" width=88% style="display: block; margin-left: auto; margin-right: auto">
 </div>
 
 <!-- Footer -->
@@ -302,16 +301,16 @@ function toggleFunction() {
     }
 }
 </script>
-
+<div>
 <script 
-  color="220,0,0" 
+  color="255,0,0" 
   opacity='0.95'
   pointColor="255,0,0" 
-  zIndex="5" 
-  count="250" 
+  zIndex="0" 
+  count="600" 
   src="./canvas-nest.js">
 </script>
-
+</div>
 <!-- <canvas id="c_n3" width="1401" height="500" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.7;"></canvas> -->
 
 <!-- <script src="canvas-nest.js"></script> -->
