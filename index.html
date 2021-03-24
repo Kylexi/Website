@@ -11,6 +11,30 @@
     gtag('config', 'UA-173111925-1');
   </script>
   <link rel="icon" href="./images/icon.png">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_o4VNxiqoiZdvQSjfbtC3I');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_6rns3fh', 'template_yk2hm83', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
   <title>Matthew Campbell</title>
 </head>
 <meta charset="UTF-8">
@@ -18,6 +42,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./styler.css">
 <style>
 body,h1,h2,h4,h5,h6 {font-family: "Times New Roman", serif; font-size: 14pt;}
 h3 {font-family: "Times New Roman", serif; font-size: 20pt; font-weight: bold;}
@@ -65,6 +90,15 @@ body, html {
     background-attachment: scroll;
     min-height: 400px;
   }
+}
+</style>
+<style>
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 </style>
 <body>
@@ -169,21 +203,21 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
      
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/MCICOM_Logo.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Nov 2020 - Present. Data Scientist supporting Marine Corps Installation Command (MCICOM) strategic capability efforts. Developed PowerBI dashboard, regression models, a Bayesian network to tie installation services to squadron readiness, a nonhomogenous Poisson process simulation to optimize aircraft fuel scheduling, and an RShiny application offering intuitive UI.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/dasa.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - Oct 2020. Lead Operations Research Analyst for development on the Common Workforce Analysis Tool (CWAT), a workforce-workload analysis tool (Excel) utilized by many branches within the government involved in Foreign Military Sales. Tasks included frequent client interactions and demos, orchestrating large scale changes to the existing tool to meet the client's changing needs, and leading other supporting analysts in the effort. Python, Excel, Data visualization, Jira. <br><br>*Won award on the project for consistently successful explanations to the client and for bringing strong programming leadership to the team by introducing code review sessions and Python best-practices.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/cla.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, Feb 2020 - June 2020. Led development of Excel-based, goal-programming tool to address the best way to distribute linguists within the Navy and Marine Corps. Integrated open-source tools to expand the capabilities of Excel's 'solver' to meet the scale of the optimization problem. <br><br>*Won award on the project for implementation effectiveness, ability to communicate the concepts of the algorithm to both teammates and clients, and for smooth model runs throughout the projects lifecycle.">
     </div>
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/ffx.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://www.boozallen.com/'>Booz Allen Hamilton</a>, July 2019 - Jan 2020. Developed data pipelines, analysis, and novel visualizations for the Fairfax County Fire & Rescue team. Effort was to recommend a redistribution of emergency vehicles in order to better minimize average response times to incidents. Major tools used were Python and Tableau. <br><br>*Won award on the project for novel visualizations and efficient data pipelining.">
     </div>
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/protein.jpg" style = "padding: 5px" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="S3I LLC Data Scientist, Jan 2018 - June 2019. Research effort to selectively denature proteins harmful to humans, an alternative to chemical-based medicinal approaches. Created Python data pipelines to process the <a href='https://www.rcsb.org/'>Protein Data Bank</a>. Implemented and automated biological algorithms from break-through papers to determine physical properties of proteins.">
     </div>
   </div>
@@ -192,27 +226,27 @@ body, html {
   <p class="w3-center"><em>My personal projects that I work on in my free time.</em></p>
 
   <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="./imgs/nhpp.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://pypi.org/project/nhpp/'>A small library</a> that enables quick computation of nonhomogeneous Poisson processes. Implemented using a function inversion method with a piecewise linear approximation for a time-dependent rate. Currently working to incorporate specification of an arbitrary rate function using both the inversion method above and a 'thinning' (rejection sampling) approach.">
+    <div class="w3-col m3 zoom">
+      <img src="./imgs/nhpp.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://pypi.org/project/nhpp/'>A small library</a> that enables quick computation of nonhomogeneous Poisson processes. Implemented using a function inversion method with a piecewise linear approximation for a time-dependent rate. Also supports the option to specify an arbitrary rate function programmatically to use in tandem with a piecewise linear function via rejection sampling.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/bayes_linear_reg.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://github.com/Kylexi/MathSamples'>Math Samples</a>. My collection of mathematics/scientific scripts that I write in my personal time to stay sharp and continue building knowledge. The focus of these scripts has been Bayesian implementations of stock-standard techniques like linear and logistic regression, as well as moving forward into DGMs and other more advanced methods like simulated annealing and Gibbs sampling in the future.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/ebuy.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='https://github.com/Kylexi/ebuy'>Ebuy Project (For lack of a better name)</a>. Developing predictive model to understand what drives selling price of the item 'Super Smash Bros Melee' up on Ebay. Built a webscraper to periodically obtain new data from Ebay and a data pipeline that feeds cleaned data into a PostgreSQL database. Modeled selling price using both a Lasso-penalized regression to assess which features drive price and a gradient boosted regression tree (<a href='https://catboost.ai'>CatBoost</a>) to better predict selling price. Data types included text, images, and real valued numbers.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/stack.jpg" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="Built a <a href='https://github.com/Kylexi/ensemblenet'>custom stacking CNN model</a> to predict images from the Dogs vs Cats dataset, achieving total accuracy (balanced dataset) of just over 94%, a notable accomplishment on this dataset. Wrote an <a href='https://medium.com/@mmcampbell0/stacking-convolutional-neural-nets-c1e9dded5ce3'>article on Medium</a> documenting the process and providing intuition for the idea of stacking models.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/kyball.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="My dip into the DevOps world; I built automated infrastructure to create/terminate a LAMP-stack (including writing to the database itself!) and host it via AWS elastic beanstalk. IaC was done through Terraform. The website to view the LAMP stack is usually down to minimize personal costs, but the idea is well-laid out in the above image as well as the <a href='https://github.com/Kylexi/Kyball'>GitHub page</a>.">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 zoom">
       <img src="./imgs/website.png" height="220px" width="220px" onclick="onClick(this)" class="w3-hover-opacity" alt="<a href='./old_site.html'>The last iteration</a> of my website. This one has some neat animations and feels more like a dashboard; however, it is not as responsive and does not fair well on small screens (phones/tablets). The current iteration aims to fix those issues as well as present more professionally.">
     </div>
 
@@ -239,7 +273,7 @@ body, html {
   <p class="w3-center"><em>Get in touch with me. Open to new opportunities and feedback.</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m8 w3-panel">
+    <div class="w3-col">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Reston, VA<br>
         <i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> (928) 814-2535<br>
@@ -248,23 +282,28 @@ body, html {
         <i class="fa fa-file-text fa-fw w3-xlarge w3-margin-right"></i> <a href="./Resume.pdf">Resume</a><br />
       </div>
       <!-- Maybe include this later on -->
-      <!-- <p>Or message me from here.</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form> -->
     </div>
   </div>
+
+<div class="container">
+  <form id="contact-form">
+    <input type="hidden" name="contact_number">
+    <div class="w3-row-padding w3-center" style="margin:0 -16px 8px -16px">
+      <div class="w3-half">
+        <input class="w3-input w3-border" type="text" placeholder="Mr. Jones" required name="user_name">
+      </div>
+      <div class="w3-half">
+        <input class="w3-input w3-border" type="text" placeholder="jonesy@jonesin.com" required name="user_email">
+      </div>
+    </div>
+    <textarea class="w3-input w3-border" type="text" placeholder="I'm Mr. Jones, here's the deal..." required name="message"></textarea>
+    <button class="w3-button w3-black w3-right" type="submit">
+      <i class="fa fa-paper-plane"></i>SEND
+    </button>
+  </form>
+<br>
+<br>
+</div>
   <!-- <img src="./imgs/grassy_mountain.jpg" width=88% style="display: block; margin-left: auto; margin-right: auto"> -->
   <img src="./imgs/Feynman_quote.png" width=88% style="display: block; margin-left: auto; margin-right: auto">
 </div>
